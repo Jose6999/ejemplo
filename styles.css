@@ -1,0 +1,185 @@
+/* Estilos Generales */
+html, body {
+    height: 100%; /* asegura que el html y el body tomen toda la altura de la ventana */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column; /* Organiza el contenido en una columna */
+}
+
+main {
+    flex: 1; /* Toma todo el espacio disponible */
+}
+
+footer {
+    background-image: url('imagenes/fondobarraazulinferior.png');
+    background-color: #0000ff; /* color de fondo azul */
+    background-size: cover;
+    background-position: center;
+    color: #ffffff;
+    padding: 20px 0;
+    text-align: center;
+    font-weight: bold; /* Fuente gruesa */
+}
+
+
+body {
+    background-image: url('imagenes/fondocarwahs.jpg'); 
+    background-size: cover;  
+    background-position: center; 
+    background-repeat: no-repeat; 
+}
+header {
+    background-image: url('imagenes/fondobarraazul.png'); /* Confirma que esta es la imagen correcta */
+    background-color: #0000ff; /* Restaura el color de fondo azul */
+    background-size: cover;
+    background-position: center;
+    color: #ffffff;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+nav ul {
+    list-style: none;
+    padding: 2px;
+}
+
+nav ul li {
+    display: inline;
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 5px 5px;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ff0000;
+}
+
+/* Menú responsivo */
+@media (max-width: 768px) {
+    nav ul {
+        position: absolute;
+        background-color: #0000ff;
+        width: 100%;
+        display: none;
+        flex-direction: column;
+        top: 60px;
+        left: 0;
+    }
+
+    nav ul.active {
+        display: flex;
+    }
+
+    nav ul li {
+        text-align: center;
+        width: 100%;
+        display: block;
+    }
+
+    .menu-toggle {
+        display: block;
+        cursor: pointer;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        font-size: 30px;
+    }
+}
+main {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+section {
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5); /* fondo oscuro para mejorar la legibilidad */
+    color: #ffffff;
+    padding: 50px 0;
+    margin: 20px;
+    border-radius: 8px;
+    box-shadow: 1px 1px 2px rgba(0,0,0,0.7);
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 20px;
+    background-color: #ff0000;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #cc0000;
+}
+
+/* Footer Styles */
+footer {
+    background-image: url('imagenes/fondobarraazulinferior.png');
+    background-color: #0000ff; /* Color de fondo azul */
+    background-size: cover;
+    background-position: center;
+    color: #ffffff;
+    padding: 2px 0; /* Reduce el padding vertical para disminuir la altura */
+    text-align: center;
+    font-weight: bold; /* Fuente gruesa */
+}
+.contact-container h4, .contact-container p {
+    font-size: 16px; /* Ajusta el tamaño de fuente según la necesidad */
+    color: #ffffff; /* Texto blanco para mejor contraste */
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.7); /* Sombra de texto para mejorar la legibilidad */
+}
+
+.contact-container {
+    display: flex;
+    justify-content: space-around;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.contact-column {
+    flex: 1;
+    padding: 0 20px;
+}
+
+.contact-container h4, .contact-container p {
+    color: #ffffff; /* texto blanco */
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5); /* sombra de texto */
+}
+
+@media (max-width: 768px) {
+    .contact-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-column {
+        margin-bottom: 20px;
+    }
+}
+
+.logo {
+    width: 100px;  /* Ajusta el ancho a un tamaño más adecuado */
+    height: auto;  /* Mantiene la proporción del logo al ajustar el ancho */
+}
+header, footer {
+    font-weight: bold; /* Hace el texto más grueso */
+}
+header h1, header nav a, footer {
+    font-weight: bold; /* Solo aplica a los títulos h1 y enlaces en el header y todo el footer */
+}
+

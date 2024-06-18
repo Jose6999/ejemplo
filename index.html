@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="AurisMotor’s Carwash ofrece servicios completos de cuidado y limpieza automotriz con tecnología de punta.">
+    <meta name="keywords" content="carwash, limpieza de autos, servicio automotriz">
+    <title>AurisMotor’s Carwash</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <img src="imagenes/logoaurismotors.png" alt="Logo de AurisMotor’s Carwash" class="logo">
+        <nav>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#sobre-nosotros">Sobre Nosotros</a></li>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#reservas">Reservas</a></li>
+                <li><a href="#galeria">Galería</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+                <li><a href="#faq">FAQ</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="inicio">
+            <h1>Bienvenido a AurisMotor’s Carwash</h1>
+            <p>Tu solución completa para el cuidado y limpieza de tu vehículo.</p>
+            <p>En AurisMotor’s nos dedicamos a proporcionar el mejor servicio de lavado y cuidado automotriz con tecnología de punta y un enfoque personalizado. No importa lo que necesites, tenemos un servicio especialmente para ti.</p>
+            <a href="#reservas" class="cta-button">Reserva tu cita hoy</a>
+        </section>
+        <section id="sobre-nosotros">
+            <h2>Sobre Nosotros</h2>
+            <p>Somos líderes en el cuidado y mantenimiento automotriz, fundados en [año], comprometidos con ofrecer un servicio de alta calidad que garantiza la satisfacción de nuestros clientes. Nuestra misión es proporcionar soluciones efectivas y accesibles para el mantenimiento de vehículos, empleando tecnología avanzada y prácticas sostenibles.</p>
+            <p>En [Nombre de la Empresa], valoramos la confianza que nuestros clientes depositan en nosotros y nos esforzamos por ofrecer un servicio excepcional en cada visita. Nuestro equipo está compuesto por profesionales experimentados y apasionados por los automóviles.</p>
+        </section>
+        <section id="servicios">
+            <h2>Servicios</h2>
+            <p>En AurisMotor’s, ofrecemos una variedad de servicios para mantener tu vehículo en las mejores condiciones. Nuestros servicios incluyen:</p>
+            <ul>
+                <li>Lavado Básico: Incluye lavado exterior e interior básico.</li>
+                <li>Lavado Premium: Incluye lavado básico más pulido y encerado.</li>
+                <li>Lavado VIP: Un servicio completo que incluye todos los servicios de lavado Premium más tratamientos adicionales para el detalle del vehículo.</li>
+            </ul>
+        </section>
+        <section id="reservas">
+            <h2>Reservas</h2>
+            <p>Reserva tu cita con nosotros fácilmente a través de nuestro formulario en línea. Selecciona el servicio que deseas, elige tu horario preferido y deja que nos encarguemos del resto.</p>
+            <a href="#formulario-reserva" class="cta-button">Haz tu reserva aquí</a>
+        </section>
+        <section id="galeria">
+            <h2>Galería</h2>
+            <p>Echa un vistazo a nuestro trabajo a través de esta galería de imágenes de vehículos antes y después de nuestros servicios de limpieza y cuidado automotriz.</p>
+            <div class="gallery">
+                <div class="gallery-item">
+                    <h3>Antes del lavado</h3>
+                    <img src="imagenes/antes1.jpg" alt="Auto antes del lavado">
+                </div>
+                <div class="gallery-item">
+                    <h3>Después del lavado</h3>
+                    <img src="imagenes/antes2.jpg" alt="Auto después del lavado">
+                </div>
+            </div>
+        </section>        
+        <section id="contacto">
+            <h2>Contacto</h2>
+            <p>¿Tienes alguna pregunta? No dudes en contactarnos a través de los siguientes medios:</p>
+            <ul>
+                <li>Teléfono: +51 91904964</li>
+                <li>Email:vegaaurisjosealexander@gmail.com</li>
+                <li>Dirección: Plaza Tupac Zona A</li>
+            </ul>
+        </section>
+        <section id="faq">
+            <h2>Preguntas Frecuentes</h2>
+            <dl>
+                <dt>¿Necesito reservar una cita?</dt>
+                <dd>Sí, recomendamos reservar una cita para asegurar tu espacio en nuestro calendario.</dd>
+                <dt>¿Qué métodos de pago aceptan?</dt>
+                <dd>Aceptamos efectivo, tarjetas de crédito y pagos digitales.</dd>
+            </dl>
+        </section>
+        
+        
+        <!-- Más secciones seguirán aquí -->
+    </main>
+    <footer>
+        <div class="contact-container">
+            <div class="contact-column">
+                <h4>Dirección:</h4>
+                <p>Plaza Tupac Zona A</p>
+            </div>
+            <div class="contact-column">
+                <h4>Teléfono:</h4>
+                <p>+51 91904964</p>
+            </div>
+            <div class="contact-column">
+                <h4>Email:</h4>
+                <p>vegaaurisjosealexander@gmail.com</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        function cambiarSeccion(seccion) {
+            // Oculta todas las secciones
+            document.querySelectorAll('section').forEach(function (el) {
+                el.style.display = 'none';
+            });
+            // Muestra la sección seleccionada
+            document.getElementById(seccion).style.display = 'block';
+        }
+    
+        // Añade el event listener a cada enlace en la navegación
+        document.querySelectorAll('nav a').forEach(function (el) {
+            el.addEventListener('click', function (e) {
+                e.preventDefault();  // Evita que el navegador salte a la sección
+                var seccion = this.getAttribute('href').substring(1); // Obtiene el ID de la sección
+                cambiarSeccion(seccion); // Cambia la sección visible
+            });
+        });
+    
+        // Muestra la sección de inicio por defecto al cargar la página
+        cambiarSeccion('inicio');
+    });
+    </script>
+    
